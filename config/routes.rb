@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'crypto#dashboard'
   get '/contact_us', to: 'crypto#contact_us'
   get '/whitepaper', to: 'crypto#white_paper'
-
+  get '/t', to: 'crypto#typography.html'
   
 end
