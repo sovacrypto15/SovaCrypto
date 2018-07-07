@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,600");
+/* line 8, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+* {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+/* line 65, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.notice, .alert {
+  display: none;
+}
+
+/* line 74, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.topnav {
+  width: 100%;
+  height: 40px;
+  background: #4E0713;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/* line 81, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.topnav .icon {
+  color: #FFB81C;
+  margin: 0px 5px 0px 5px;
+}
+/* line 86, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.topnav .topnav-elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 50px;
+}
+/* line 91, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.topnav .topnav-elem p {
+  color: #FFFF;
+  margin: 0px 15px 0px 15px;
+  font-weight: 300;
+  font-size: .8em;
+}
+
+/* line 100, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.navbar {
+  height: 70px;
+}
+/* line 103, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.navbar img {
+  height: 60px;
+  width: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 111, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+#navbars-md-collapse {
+  position: relative;
+  z-index: 999;
+  background: #FFFF;
+  width: 100vw;
+  padding: 15px;
+}
+@media screen and (max-width: 600px) {
+  /* line 111, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  #navbars-md-collapse {
+    top: -12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 123, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  #navbars-md-collapse li a {
+    font-size: 1.3em;
+  }
+}
+
+/* line 131, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 134, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.navbar-brand h2 {
+  font-weight: 300;
+  color: #FFB81C;
+}
+
+/* line 141, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+ul.navbar-nav button {
+  margin: 0px 10px 0px 10px;
+  border-radius: 3px;
+  background: #FFB81C;
+  color: #041E42;
+  letter-spacing: 2px;
+}
+
+/* line 151, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.banner {
+  background-image: url("avian-owl.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 525px;
+  overflow: none;
+}
+@media screen and (max-width: 500px) {
+  /* line 151, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .banner {
+    height: 800px;
+  }
+}
+/* line 162, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.banner .banner-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: #FFFF;
+  opacity: 0.48;
+}
+/* line 172, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.banner .b-content-container {
+  position: relative;
+  top: -520px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+}
+@media screen and (max-width: 500px) {
+  /* line 172, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .banner .b-content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/* line 183, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.banner .b-content-container .b-content {
+  padding: 20px;
+  width: 30%;
+  color: #FFFF;
+  position: relative;
+  z-index: 2;
+  background: #830C21;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+@media screen and (max-width: 500px) {
+  /* line 183, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .banner .b-content-container .b-content {
+    width: 80%;
+    top: -250px;
+  }
+}
+/* line 197, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.banner .b-content-container .b-content h5 {
+  font-weight: 300;
+}
+/* line 201, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.banner .b-content-container .b-content button {
+  background: none;
+  margin-top: 20px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  color: #FFFF;
+  border-color: #FFB81C;
+}
+/* line 211, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.banner .b-content-container .b-content-img {
+  height: 520px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  /* line 211, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .banner .b-content-container .b-content-img {
+    width: 100%;
+  }
+}
+/* line 221, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.banner .b-content-container .b-content-img .img {
+  background-image: url("coinIphonewhite2.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  /* line 221, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .banner .b-content-container .b-content-img .img {
+    top: -250px;
+  }
+}
+
+/* line 242, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.coins {
+  width: 100%;
+  height: 60px;
+  background: #020F21;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFB81C;
+}
+/* line 250, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.coins .signups {
+  margin: 10px;
+  margin-top: 15px;
+}
+/* line 254, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.coins .signups h5 {
+  font-weight: 300;
+}
+
+/* line 262, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.time {
+  background: #ECF0F1;
+  width: 100%;
+  background-image: url("aurora2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 269, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.time h3 {
+  color: white;
+}
+/* line 272, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.time .sovacoin {
+  height: 300px;
+  width: 400px;
+  background-image: url("OfficialSovaCoin.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 277, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.time #clock {
+  margin: 0 auto;
+  width: 100%;
+  color: #FFB81C;
+  font-size: 22pt;
+  text-align: center;
+}
+/* line 284, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.time #clock .timing {
+  margin: 10px;
+  padding: 5px;
+  background: #830C21;
+  border: 1px solid #FFB81C;
+  border-radius: 5%;
+  text-align: center;
+}
+
+/* line 297, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.git-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: #020F21;
+  color: white;
+  padding: 15px;
+}
+/* line 304, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.git-section .git-heading {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+/* line 311, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.git-section .git-heading h1 {
+  margin: 10px 0px 0px 15px;
+}
+/* line 315, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.git-section .git-heading .ether {
+  color: cyan;
+}
+/* line 320, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.git-section .git-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+@media screen and (max-width: 600px) {
+  /* line 320, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .git-section .git-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /* line 327, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .git-section .git-content .git-desc {
+    width: 100%;
+  }
+  /* line 331, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .git-section .git-content .git-link {
+    width: 80%;
+  }
+  /* line 334, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .git-section .git-content .git-link a {
+    width: 100%;
+  }
+}
+/* line 340, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.git-section .git-content .git-link {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: center;
+}
+/* line 345, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.git-section .git-content .git-desc {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  letter-spacing: 1px;
+  color: #FFB81C;
+}
+
+/* line 356, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.price-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #ECF0F1;
+}
+@media screen and (max-width: 500px) {
+  /* line 356, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .price-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+/* line 366, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.price-section .currencies {
+  width: 50%;
+  padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  /* line 366, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .price-section .currencies {
+    padding: 0px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/* line 377, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.price-section .content-box-one {
+  margin-top: 5%;
+  width: 30%;
+  padding-left: 50px;
+}
+/* line 382, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.price-section .content-box-one p {
+  letter-spacing: 0.4px;
+}
+@media screen and (max-width: 500px) {
+  /* line 377, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .price-section .content-box-one {
+    width: 90%;
+  }
+}
+
+/* line 392, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.dist-section {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 397, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.dist-section .heading {
+  width: 90%;
+  text-align: center;
+}
+/* line 402, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.dist-section .graphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+@media screen and (max-width: 500px) {
+  /* line 402, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .dist-section .graphs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+/* line 410, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.dist-section .graphs .graph-section-one,
+.dist-section .graphs .graph-section-two {
+  height: 400px;
+  width: 50%;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  /* line 410, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .dist-section .graphs .graph-section-one,
+  .dist-section .graphs .graph-section-two {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 420, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .dist-section .graphs .graph-section-two {
+    display: none;
+  }
+}
+
+/* line 432, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.faq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+  padding: 25px;
+  width: 100%;
+  background: #4E0713;
+  color: #FFB81C;
+}
+/* line 440, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.faq .faq-heading {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+/* line 446, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.faq .faq-dropdowns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+/* line 450, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.faq .faq-dropdowns .faq-drop-column-1,
+.faq .faq-dropdowns .faq-drop-column-2 {
+  width: 48%;
+}
+
+/* line 458, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.card {
+  border: none;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* line 465, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.card-header {
+  background: #830C21;
+}
+/* line 468, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.card-header a {
+  color: #FFB81C;
+}
+/* line 472, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.card-header .down-arrow {
+  position: absolute;
+  right: 10px;
+}
+
+/* line 477, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.card-body {
+  color: #FFB81C;
+  background: #4E0713;
+}
+
+/* line 485, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+#footer {
+  background: #020F21;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 490, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section {
+  background: #041E42;
+  width: 100%;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  /* line 490, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .footer-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/* line 502, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+}
+@media screen and (max-width: 600px) {
+  /* line 502, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .footer-section .footer-col-one {
+    width: 100%;
+  }
+}
+/* line 511, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-one .footer-img {
+  height: 100px;
+  width: 100px;
+  background-image: url("SovaCrypto2.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 516, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-one p {
+  color: white;
+}
+/* line 521, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  letter-spacing: 1px;
+  width: 25%;
+  text-align: center;
+}
+/* line 528, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-two h4 {
+  color: #FFB81C;
+}
+/* line 533, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-two .footer-links ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+/* line 536, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-two .footer-links ul li {
+  color: #FFB81C;
+  text-align: left;
+}
+/* line 544, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  letter-spacing: 1px;
+  width: 20%;
+}
+@media screen and (max-width: 600px) {
+  /* line 544, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .footer-section .footer-col-three {
+    width: 100%;
+  }
+}
+/* line 554, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-three h4 {
+  color: #FFB81C;
+}
+/* line 558, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+.footer-section .footer-col-three .footer-contacts {
+  color: #FFB81C;
+}
+@media screen and (max-width: 600px) {
+  /* line 558, /Users/rajistebennin/Desktop/Projects/sovacrypto/app/assets/stylesheets/crypto.scss */
+  .footer-section .footer-col-three .footer-contacts {
+    width: 80%;
+    text-align: center;
+  }
+}

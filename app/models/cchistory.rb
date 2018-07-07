@@ -1,0 +1,2 @@
+class Cchistory < ApplicationRecord
+end

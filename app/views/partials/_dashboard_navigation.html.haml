@@ -1,0 +1,17 @@
+%nav.navbar.navbar-expand-md.navbar-dark
+    %a.navbar-brand{:href => "/"} 
+        = image_tag 'SovaCrypto2.png'
+        %h2 SovaCrypto
+    %button.navbar-toggler{"aria-controls" => "navbars-md-collapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbars-md-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+    #navbars-md-collapse.collapse.navbar-collapse
+        %ul.navbar-nav.ml-auto
+            -#
+                %li.nav-item.active
+                    %a.nav-link{:href=>"/"}
+                        Home
+                        %span.sr-only
+                            (current)
+            %li.nav-item
+                %a.nav-link{:href=>"/#about"}
+                    About Us

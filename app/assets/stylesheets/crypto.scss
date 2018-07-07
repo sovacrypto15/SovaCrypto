@@ -1,0 +1,578 @@
+// Place all the styles related to the crypto controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Default Text - Google Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,600');
+* {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+// Default Colors
+
+$wine: #830C21;
+$darkwine: #4E0713;
+$gold: #FFB81C;
+$navy: #041E42;
+$darknavy: #020F21;
+$white: #FFFF;
+$clouds: #ECF0F1;
+
+// Mixins
+
+@mixin bg-image-cover($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@mixin bg-image-contain($url) {
+  background-image: url($url);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@mixin flex-center-center-btwn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-center-center-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-center-center-btwn-col {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-center-center-around-col {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notice, .alert {
+    display: none;
+}
+
+
+// ************************ // ********************** // ******************* //
+
+// NAVBAR
+
+.topnav {
+    width: 100%;
+    height: 40px;
+    background: $darkwine;
+    @include flex-center-center-around;
+    justify-content: flex-end;
+
+    .icon {
+        color: $gold;
+        margin: 0px 5px 0px 5px;
+    }
+
+    .topnav-elem {
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+
+        p {
+            color: $gold;
+            margin: 0px 15px 0px 15px;
+            font-weight: 300;
+            font-size: .8em;
+        }
+    }
+}
+
+.navbar {
+    height: 70px;
+
+    img {
+        height: 60px;
+        width: 60px;
+        padding: 0; 
+        margin: 0;
+    }
+}
+
+#navbars-md-collapse {
+    position: relative;
+    z-index: 999;
+    background: $white;
+    width: 100vw;
+    padding: 15px;
+
+    @media screen and (max-width: 600px) {
+        top: -12px;
+    }
+
+
+    li a {
+        color: $wine;
+        @media screen and (max-width: 600px) {
+            font-size: 1.3em;
+        }
+    }
+}
+
+
+.navbar-brand {
+    @include flex-center-center-btwn;
+
+    h2 {
+        font-weight: 300;
+        color: $gold;
+    }
+}
+
+
+ul.navbar-nav .nav-btn {
+    margin: 0px 10px 0px 10px;
+    border-radius: 3px;
+    background: $gold;
+    letter-spacing: 2px;
+}
+
+// BANNER 
+
+.banner {
+    @include bg-image-cover('avian-owl.jpg');
+    width: 100%;
+    height: 525px;
+    overflow: none;
+
+    @media screen and (max-width: 500px) {
+      height: 800px;
+    }
+
+
+    .banner-overlay {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background: $white;
+        opacity: 0.48;
+        
+    }
+
+    .b-content-container {
+        position: relative;
+        top: -520px;
+        width:100%;
+        @include flex-center-center-around;
+        z-index: 3;
+
+        @media screen and (max-width: 500px) {
+            @include flex-center-center-around-col;
+        }
+
+        .b-content {
+            padding: 20px;
+            width: 30%;
+            color: $gold;
+            position: relative;
+            z-index: 2;
+            background: $wine;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            @media screen and (max-width: 500px) {
+              width: 80%;
+              top: -250px;
+            }
+
+
+            h5 {
+                font-weight: 300;
+            }
+
+            button {
+                background: none;
+                margin-top: 20px;
+                border-radius: 3px;
+                letter-spacing: 1px;
+                color: $white;
+                border-color: $gold;
+
+                a {
+                  color: $gold;
+                  text-decoration: none;
+                }
+
+            }
+        }
+
+        .b-content-img {
+            height: 520px;
+            width: 50%;
+            @include flex-center-center-btwn;
+            align-items: center;
+            @media screen and (max-width: 500px) {
+              width: 100%;
+            }
+
+
+            .img {
+                @include bg-image-contain('coinIphonewhite2.png');
+                position: relative;
+                height: 100%;
+                width: 100%;
+                @media screen and (max-width: 500px) {
+                  top: -250px;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// COINS
+
+.coins {
+    width: 100%;
+    height: 60px;
+    background: $darknavy;
+    @include flex-center-center-around;
+    justify-content: center;
+    color: $gold;
+
+    .signups {
+        margin: 10px;
+        margin-top: 15px;
+
+        h5 {
+            font-weight: 300;
+        }
+    }
+}
+
+// CLOCK
+
+.time {
+    background: $clouds;
+    width: 100%;
+    @include bg-image-cover('aurora2.jpg');
+
+    @include flex-center-center-around-col;
+
+    h3 {
+        color: $gold;
+    }
+    .sovacoin {
+        height: 300px;
+        width: 400px;
+        @include bg-image-cover('OfficialSovaCoin.png');
+    }
+    #clock {
+        margin: 0 auto;
+        width: 100%;
+        color: $gold;
+        font-size: 22pt;
+        text-align: center;
+
+        .timing {
+            margin: 10px;
+            padding: 5px;
+            background: $wine;
+            border: 1px solid $gold;
+            border-radius: 5%;
+            text-align: center;
+        }
+    }
+}
+
+// GITHUB LINK SECTION
+
+.git-section {
+    @include flex-center-center-around-col;
+    width: 100%;
+    background: $darknavy;
+    color: $gold;
+    padding: 15px;
+
+    .git-heading {
+        width: 80%;
+        display: flex;
+        padding: 15px;
+        align-items: center;
+        margin-bottom: 10px;
+
+        h1 {
+            margin: 10px 0px 0px 15px;
+        }
+
+        .ether {
+            color: cyan;
+        }
+    }
+
+    .git-content {
+        @include flex-center-center-around;
+        width: 80%;
+
+        @media screen and (max-width: 600px) {
+            @include flex-center-center-around-col;
+
+            .git-desc {
+                width: 100%;
+            }
+
+            .git-link {
+                width: 80%;
+
+                a {
+                    width: 100%;
+                }
+            }
+        }
+
+        .git-link {
+            flex: 2;
+            text-align: center;
+        }
+
+        .git-desc {
+            flex: 4;
+            letter-spacing: 1px;
+            color: $gold;
+        }
+    }
+}
+
+
+// PIE CHARTS
+
+.price-section {
+    @include flex-center-center-around;
+    align-items: flex-start;
+    background: $clouds;
+    @media screen and (max-width: 500px) {
+      @include flex-center-center-around-col;
+      width: 100%;
+    }
+
+    
+    .currencies {
+        width: 50%;
+        padding: 40px;
+        
+        @media screen and (max-width: 600px) {
+            padding: 0px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .content-box-one {
+        margin-top: 5%;
+        width: 30%;
+        padding-left: 50px;
+
+        p {
+            letter-spacing: 0.4px;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 90%;
+        }
+    }
+}
+
+.dist-section {
+    width: 100%;
+    padding: 20px;
+    @include flex-center-center-around-col;
+
+    .heading {
+        width: 90%;
+        text-align: center;
+    }
+
+    .graphs {
+        @include flex-center-center-btwn;
+        width: 90%;
+        @media screen and (max-width: 500px) {
+            @include flex-center-center-around-col;
+            width: 100%;
+        }
+
+        .graph-section-one,
+        .graph-section-two {
+            height: 400px;
+            width: 50%;
+            text-align: center;
+            @media screen and (max-width: 500px) {
+              width: 100%;
+            }
+        }
+
+        .graph-section-two {
+            @media screen and (max-width: 600px) {
+              display: none;
+            }
+        }
+
+    }
+}
+
+
+// FAQ SECTION
+
+.faq {
+    @include flex-center-center-around-col;
+    margin-top: 25px;
+    padding: 25px;
+    width: 100%;
+    background: $darkwine;
+    color: $gold;
+
+    .faq-heading {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .faq-dropdowns {
+        @include flex-center-center-btwn;
+        width: 80%;
+
+        .faq-drop-column-1,
+        .faq-drop-column-2 {
+            width: 48%;
+        }
+
+    }
+}
+
+.card {
+    border: none;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+
+.card-header {
+    background: rgba(230, 230, 230, 0.85);
+
+    a {
+        color: black;
+    }
+
+    .down-arrow {
+        position: absolute;
+        right: 10px;
+    }
+}
+.card-body {
+    color: $gold;
+    background: $darkwine
+}
+
+
+// FOOTER
+
+#footer {
+    background: $darknavy;
+    justify-content: space-between;
+}
+
+.footer-section {
+    background: $navy;
+    width: 100%;
+    padding: 25px;
+    @include flex-center-center-around;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media screen and (max-width: 600px) {
+        @include flex-center-center-around-col; 
+    }
+
+    .footer-col-one {
+        @include flex-center-center-around-col;
+        width: 25%;
+
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+
+
+        .footer-img {
+            height: 100px;
+            width: 100px;
+            @include bg-image-cover('SovaCrypto2.png');
+        }
+        p {
+            color: $gold;
+        }
+    }
+
+    .footer-col-two {
+        @include flex-center-center-around-col;
+        margin-top: 40px;
+        letter-spacing: 1px;
+        width: 25%;
+        text-align: center;
+
+        h4 {
+            color: $gold;
+        }
+
+        .footer-links {
+            ul {
+                list-style-type: none;
+                padding-left: 0px;
+                li {
+                    color: $gold;
+                    text-align: left;
+
+                    a {
+                        color: $gold;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-col-three {
+        @include flex-center-center-around-col;
+        margin-top: 40px;
+        letter-spacing: 1px;
+        width: 20%;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+
+
+        h4 {
+            color: $gold;
+        }
+
+        .footer-contacts {
+            color: $gold;
+
+            @media screen and (max-width: 600px) {
+                width: 80%;
+                text-align: center;
+            }
+        }
+    }
+}

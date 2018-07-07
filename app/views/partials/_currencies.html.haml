@@ -1,0 +1,37 @@
+= stylesheet_link_tag    'crypto', media: 'screen', 'data-turbolinks-track': 'reload'
+
+.currencies
+    %table{:class => ["table", "toptable", "table-hover", "table-sm", "table-dark"]}
+        %caption
+            *Live Prices
+        %thead{:class=> "thead-light" }
+            %tr
+                %th{:scope=> "col"}
+                    Rank
+                %th{:scope=> "col"}
+                    Symbol
+                %th{:scope=> "col"}
+                    Name
+                %th{:scope=> "col"}
+                    Price
+                %th{:scope=> "col"}
+                    Pct Chg
+                %th{:scope=> "col"}
+                    Pct Held
+        %tbody
+            - @response.each do |c|
+                - if c["symbol"] == 'MIOTA'
+                    - c["symbol"] = 'IOT'
+                %tr
+                    %th{:scope=> "row"}
+                        = c["rank"]
+                    %td
+                        = c["symbol"]
+                    %td
+                        = c["name"]
+                    %td{:id => "#{c["symbol"]}-PRICE"}
+                        = "$ #{c["price_usd"]}"
+                    %td{:id => "#{c["symbol"]}-CHG"}
+                        = "#{c["percent_change_24h"]}%"
+                    %td
+                        6%

@@ -1,0 +1,277 @@
+= stylesheet_link_tag    'dashboard', media: 'screen', 'data-turbolinks-track': 'reload'
+
+%nav.navbar.navbar-expand-md.navbar-dark.navbar-custom.fixed-top
+  %a.navbar-brand{:href => "#"}
+    .sym_container
+      S C
+      %span X V
+  %button.navbar-toggler{"aria-controls" => "navbarsExample04", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarsExample04", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarsExample04.collapse.navbar-collapse
+    %ul.navbar-nav.ml-auto
+      %li.nav-item.active
+        %a.nav-link{:href => "#"}
+          Home
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{:href => "#"} Dashboard
+      %li.nav-item
+        %a.nav-link{:href => "#"} Login - Register
+
+.position-relative.overflow-hidden.p-3.p-md-5.m-md-3.text-center.bg-light.banner-one
+  .col-md-5.p-lg-5.mx-auto.my-5
+    .flip-coin
+      .brand-image-one#front
+      .brand-image-one#back
+    %h1.display-4.font-weight-normal SCXV Coin Index
+    %p.lead.font-weight-normal Avoid picking winners and losers. Participate in the best coins with a world class cryptocurrency index.
+    %a.btn.btn-outline-light.btn-lg{:href => "#"}View Whitepaper
+  .product-device.box-shadow.d-none.d-md-block
+  .product-device.product-device-2.box-shadow.d-none.d-md-block
+
+%br
+.d-md-flex.flex-md-equal.w-100.my-md-3.pl-md-3.content-panel
+  .bg-light.mr-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.text-white.overflow-hidden.box
+    = render 'partials/currencies'
+  .bg-content-dark.mr-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-hidden.box.box-content-bg-dark
+    %h1 A simpler way to invest in cryptocurrencies
+    %br
+    %p 
+      The cryptocurrency space is constantly changing and many protocols are seeing
+      significant growth in both their market cap and their development communities.
+      The weekly rebalanced SOVA15 Index will hold the top 15 cryptocurrencies ranked by market 
+      cap, volume, and other inputs to ensure liquidity and to offset risk. 
+      Own the market instead of picking winners.
+    %br
+    = render 'partials/countdown'
+    .ico-offer
+      %h5 Offering Price: $0.75
+      %h5 Total Amt Remaining: 80,000,000
+      %h5 Num of Buyers: ...
+      %h5 Capital Raised: ...
+%br
+%br
+.d-md-flex.flex-md-equal.w-100.my-md-3.pl-md-3.content-panel
+  .mr-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-hidden.box.box-content-bg-light.pie
+    %i.far.fa-calendar-alt.fa-4x{:style=>"color: white"}
+    %h1{:style=>"color: goldenrod"} Watch it grow over time
+    %br
+    %p
+      With the SOVA15 equal weighted index, there is high equally diversified exposure giving
+      more weight to smaller cap cryptocurrencies that may have a higher growth potential compared 
+      to other crypto funds that are heavily weighted in either BitCoin or Ethereum. 90% of capital 
+      is evenly distributed across the top 15 cryptocurrencis and the other 10% will be used 
+      to handle trading and transaction costs. Historically, equal weighted funds have lower 
+      volatility and superior long term returns.
+  .mr-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-hidden.box.box-content-bg-light
+    .breakdown
+      = pie_chart(@pie, legend: false, height: "80%", width: "100%", label: 'Value', library: {pieHole: 0.07, pieSliceText: 'label',  slices: {0 => {offset: 0.08}}, colors:['#03C9A9', '#446CB3', '#1F3A93', '#4183D7', '#59ABE3', '#81CFE0', '#52B3D9', '#67809F', '#22313F', '#5C97BF', '#3A539B', '#5C97BF', '#1F3A93', '#81CFE0', '#34495E', '#1E8BC3'] })
+%br
+%br
+.d-md-flex.flex-md-equal.w-100.my-md-3.pl-md-3.content-panel
+  .bg-light.mr-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.text-black.overflow-hidden.box.box-content-bg-light#ico
+    %p 
+      %span{:class => "struct"} ICO Fund Utilization: 
+      90% Underlying Assets, 8% "Cash" Holdings, 2% Operational Expenses
+    %p 
+      %span{:class => "struct"} Token Type: 
+      ERC20 Ethereum Blockchain
+    %p 
+      %span{:class => "struct"} Maximum Supply (Hard Cap): 
+      100,000,000
+    %p 
+      %span{:class => "struct"} Available for Purchase: 
+      80,000,000
+    %p 
+      %span{:class => "struct"} Price Per Token:
+    %p Pre-Sale: $0.75 (first 10,000,000 tokens)
+    %p First 48hrs of ICO: $1.00
+    %p 48hrs to ICO deadline: $1.05
+    %p 
+      %span{:class => "struct"} Emission Rate: 
+      No new coins to be minted or mined after the ICO
+    %p 
+      %span{:class => "struct"} Main ICO Period: 
+      TBD
+    %a.btn.btn-outline-dark.btn-lg.jumbo-btn.linkcode{:href => "#", :role => "button"}
+      <i class="fa fa-cube"></i> Get Started
+    %p 
+      %span{:class => "ital"} Team tokens will vest over two years.
+  .bg-content-dark.mr-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-hidden.box.box-content-bg-dark
+    %i.fab.fa-ethereum.fa-6x{:style=>"color: cyan"}
+    %br
+    %br
+    %h1 ERC20 Smart Contract & Security
+    %br
+    %p
+      The Sova15 tokens are tied directly to the underlying cryptocurrency assets and in response 
+      to adverse market climates, there is a liquidation option within the Ethereum smart contract.
+      This protects the asset price from ever falling below the Sova15's share of the underlying assets.
+      Sova15 have has also implemented industry best practices for defense against bad actors and 
+      Sybil attacks. Strong verification and authentication procedures are in place, ensuring secure
+      operations. 
+    %a.btn.btn-outline-light.btn-lg.jumbo-btn.linkcode{:href => "#", :role => "button"}
+      <i class="fab fa-github-square"></i> View Github
+    %br
+%br
+%br
+.d-md-flex.flex-md-equal.w-100.my-md-3.pl-md-3.content-panel
+  -#
+    FAQ Dropdown
+  .bg-content-dark.mr-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.text-white.overflow-hidden.box
+    %h1{:style=>"color:black"} Frequently Asked Questions
+    %br
+    #accordion{:role => "tablist"}
+    .card
+      .card-header#headingOne{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseOne", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseOne"}}
+            How do I invest in the Sova15 token?
+      #collapseOne.collapse{:role => "tabpanel", :aria => {:labelledby => "headingOne"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p Please follow our guide HERE.
+      .card-header#headingTwo{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseTwo", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseTwo"}}
+            Where is Sova15 incorporated?
+      #collapseTwo.collapse{:role => "tabpanel", :aria => {:labelledby => "headingTwo"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p We are incorporated in the country of Panama as a limited liability company (LLC).
+          %p Our business structure is ideally suited for use as an investment vehicle. 
+          %p Registration, reporting requirements and due diligence is generally delegated to the fund administrator. Procedures are in line with existing AML/KYC requirements.
+      .card-header#headingThree{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseThree", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseThree"}}
+            What is Sova15's reporting requirements?
+      #collapseThree.collapse{:role => "tabpanel", :aria => {:labelledby => "headingThree"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p Sova15 will produce quarterly reports to ensure transparency and help investors to track the fund's performance.
+          %p The report will include a market overview, market analysis, strategy overview, and updates regarding new legislation.
+          %p See more in detail HERE.
+      .card-header#headingFour{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseFour", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseFour"}}
+            What is an index fund?
+      #collapseFour.collapse{:role => "tabpanel", :aria => {:labelledby => "headingFour"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p An index fund is a type of fund that constructs a portfolio to track components of a market index.
+          %p This type of fund, such as the S&P500 (Standard & Poor's 500 index), aims to buy a broad number of assets according to its own investment framework in order to track the general trend of the markets.
+          %p An index fund provides broad market exposure, low turnover and low operating expenses. These funds have been successful in outperforming most actively managed funds.
+      .card-header#headingFive{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseFive", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseFive"}}
+            Is Sova15 creating a blockchain?
+      #collapseFive.collapse{:role => "tabpanel", :aria => {:labelledby => "headingFive"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p No, the Sova15 is a token based on the Ethereum blockchain. Utilizing Ethereum blockchain technology allows for full transparency of the fund, the ability to move tokens at will with no exit fee, no legacy banking and best of all, no minimum investment. 
+      .card-header#headingSix{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseSix", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseSix"}}
+            When will the ICO take place?
+      #collapseSix.collapse{:role => "tabpanel", :aria => {:labelledby => "headingSix"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p The ICO will take place from February X, 2018 to March X, 2018.
+      .card-header#headingSeven{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseSeven", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseSeven"}}
+            How will the ICO funds be spent?
+      #collapseSeven.collapse{:role => "tabpanel", :aria => {:labelledby => "headingSeven"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p XX% of the funds will go towards the purchase of the underlying cryptocurrencies. The other X% will be used for operational expenses.
+      .card-header#headingEight{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseEight", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseEight"}}
+            How will the tokens be distributed?
+      #collapseEight.collapse{:role => "tabpanel", :aria => {:labelledby => "headingEight"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p 80% of the tokens will be issued to ICO participants. 
+      .card-header#headingNine{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseNine", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseNine"}}
+            Why shouldn't I just buy the underlying crypocurrencies myself and run my own portfolio?
+      #collapseNine.collapse{:role => "tabpanel", :aria => {:labelledby => "headingNine"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p There are many significant reasons:
+          %br
+          %p - Large funds get discounts based on volume.
+          %br
+          %p - You only have to hold 1 asset instead of 15 or more.
+          %br
+          %p - Rebalancing a portfolio is a complex and time-consuming task.
+          %br
+          %p - The convenience of buying and holding with broad market exposure. 
+      .card-header#headingTen{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseTen", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseTen"}}
+            Will the Sova15 token be tradable?
+      #collapseTen.collapse{:role => "tabpanel", :aria => {:labelledby => "headingTen"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p Yes. We will be listed on several major exchanges around the world. 
+      .card-header#headingEleven{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseEleven", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseEleven"}}
+            Can I make multiple deposits to the ICO? Buy some now and more later?
+      #collapseEleven.collapse{:role => "tabpanel", :aria => {:labelledby => "headingEleven"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p Absolutely. You can purchase as many tokens as you'd like as long as the ICO is still ongoing. 
+      .card-header#headingTwelve{:role => "tab"}
+        %h3.mb-0
+          %a.collapsed{:data =>{:toggle => "collapse"}, :href => "#collapseTwelve", :role => "button", :aria => {:expanded => false}, :aria => {:controls => "collapseTwelve"}}
+            Why should I participate in the ICO instead if just waiting until Sova15 launches?
+      #collapseTwelve.collapse{:role => "tabpanel", :aria => {:labelledby => "headingTwelve"}, :data => {:parent => "#accordion"}}
+        .card-body
+          %p Sova15 is constructed as a closed-end fund. Post ICO, the only way to acquire the token would be to purchase them on an exchange. However, you would be buying directly from ICO investors who have a big incentive to sell at a premium. The price is largely dictated by the market and some funds have been known to trade at a 50% premium abov NAV (net asset value).
+
+  .mr-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-.box.pie.box-content-bg-light.contact
+    .brand-image-two
+    %h1{:style=>"color: goldenrod"} Find us on...
+    .social
+      .social-panel
+        %h4
+          %i.fab.fa-facebook-square.fa-lg.jumbo-icon
+          Facebook
+        %h4
+          %i.fab.fa-twitter-square.fa-lg.jumbo-icon
+          Twitter
+      .social-panel
+        %h4
+          %i.fab.fa-reddit-square.fa-lg.jumbo-icon
+          Reddit
+        %h4
+          %i.fab.fa-github-square.fa-lg.jumbo-icon
+          Github
+      .social-panel
+        %h4
+          %i.fab.fa-medium.fa-lg.jumbo-icon
+          Medium
+        %h4
+          %i.fab.fa-youtube.fa-lg.jumbo-icon
+          YouTube
+    %h1{:style=>"color: goldenrod"} Contact Us
+    %h4 
+      %i.far.fa-envelope 
+      Email: info@sovacrypto.com   
+%footer.container-fluid.py-5.foot
+  .row
+    .col-4.col-md
+      %h5 Legal
+      %ul.list-unstyled.text-small
+        %li
+          %a.text-muted{:href => "#"} Disclaimer
+        %li
+          %a.text-muted{:href => "#"} Terms
+        %li
+          %a.text-muted{:href => "#"} Privacy
+        %li
+          %a.text-muted{:href => "#"} Licenses
+        %br
+        %li
+          %a.text-muted{:href => "#"} Copyright 2018
+        %li
+          %a.text-muted{:href => "#"} All Rights Reserved
+    .col-4.col-md
+      %h5 About Us
+      %ul.list-unstyled.text-small
+        %li
+          %a.text-muted{:href => "#"} 
+            The first autonomous equal weight index fund allowing investors of all stripes to participate in the overall crytocurrency market.
